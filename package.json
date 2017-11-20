@@ -1,5 +1,6 @@
 {
   "name": "p-debounce",
+  "main": "distribution/index.js",
   "version": "1.0.0",
   "description": "Debounce promise-returning & async functions",
   "license": "MIT",
@@ -13,6 +14,8 @@
     "node": ">=4"
   },
   "scripts": {
+    "build": "babel index.js --out-dir distribution",
+    "prepublish": "npm run build",
     "test": "xo && ava"
   },
   "files": [
@@ -41,6 +44,8 @@
   ],
   "devDependencies": {
     "ava": "*",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "delay": "^1.3.1",
     "in-range": "^1.0.0",
     "time-span": "^1.0.0",
