@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (fn, wait, opts) => {
-	if (!Number.isFinite(wait)) {
+	if (!isFinite(wait)) {
 		throw new TypeError('Expected `wait` to be a finite number');
 	}
 
