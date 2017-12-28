@@ -24,7 +24,7 @@ module.exports = (fn, wait, opts) => {
 
 				const res = opts.leading ? leadingVal : fn.apply(ctx, args);
 
-				for (resolve of resolveList) {
+				for (let i = 0, len = resolveList.length; i < len; i++) {
 					resolve(res);
 				}
 
